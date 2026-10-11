@@ -1,27 +1,25 @@
-QuickFinds text-only product website
+QuickFinds website — Google Sheets edition
 
-Files:
-- index.html: website content
-- styles.css: pastel design
-- products.js: your product names and destination links
-- script.js: search and category filtering
-- assets/quickfinds-logo.png: brand logo
+The existing pink QuickFinds layout is preserved.
 
-Run:
-1. Extract this ZIP.
-2. Open the extracted folder in VS Code.
-3. Open index.html in your browser or use VS Code Live Server.
+HOW TO ADD PRODUCTS AFTER THIS UPDATE
+1. Open the Google Sheet named "QuickFinds Products".
+2. Add a new row under the headings. Keep these columns:
+   id | Category | Title | product_link | platform
+3. Put the correct product URL in product_link and the store name in platform
+   (Amazon, Meesho, Myntra, Flipkart, etc.).
+4. The live site reads the sheet when visitors open or refresh the site.
+   You do not need to edit products.js for every new product.
 
-Add products:
-Open products.js and add another object inside the products array. Every object needs a unique id, category, title and destinationUrl. Example:
-{
-  id: 2,
-  category: "Beauty",
-  title: "Product title here",
-  destinationUrl: "https://example.com/product",
-  buttonLabel: "Open product"
-}
-
-The existing first item uses the Amazon URL you supplied. It is currently a normal product URL, not necessarily an affiliate link. Replace it with your actual affiliate URL when your affiliate program allows you to generate one. Links open in a new browser tab; on phones, the destination may open in the related app if the app and device support that URL.
-
-Before publishing, review product information, the affiliate disclosure, and the host's current terms.
+IMPORTANT ONE-TIME SETUP
+- Deploy these updated website files to the existing Netlify/GitHub site once.
+- The Google Sheet must be viewable by anyone with the link, or the CSV endpoint
+  may not be readable by visitors. Do not put personal or sensitive information
+  in the sheet.
+- If new rows do not show after deployment, check the browser console for a
+  cross-origin or access error. If Google blocks the direct CSV request, the
+  next step is to use a Google Apps Script web app as the sheet feed.
+- products.js keeps a fallback list so the page still shows products if the
+  sheet cannot be fetched.
+- Use valid affiliate links only where you are enrolled and allowed to use them.
+  Affiliate links and commissions are subject to each program's terms.

@@ -1,11 +1,7 @@
 /*
-  QUICKFINDS PRODUCT LIST
-  Add one object for each product.
-  - title: the name visitors see
-  - category: Fashion, Beauty, Lifestyle, or Gadgets
-  - destinationUrl: the URL that opens when they tap "Open product"
-  - buttonLabel: optional label for the button
-  Use your actual affiliate URL when your affiliate program permits you to use it.
+  QUICKFINDS FALLBACK PRODUCT LIST
+  The live site first loads products from the Google Sheet configured in script.js.
+  These products are shown if the sheet cannot be reached.
 */
 const products = [
   {
@@ -13,27 +9,23 @@ const products = [
     category: "Fashion",
     title: "EXOTIC Premium® Unique Shape Texture Design Flap Sling Bag — Beige",
     destinationUrl: "https://amzn.in/d/07b6U44l",
-    buttonLabel: "View on Amazon"
-  },
-   {
-    id: 2,
-    category: "Beauty",
-    title: "Korean Flower Hair Claw Clips – 4 Pieces (Multicolor)",
-    destinationUrl: "https://link.amazon/B07K5gJZq",
+    platform: "Amazon",
     buttonLabel: "Shop on Amazon"
   },
-];
-
-
-/*
-  TO ADD ANOTHER PRODUCT:
-  Copy the object above, add a comma after the previous object, and change its id,
-  category, title and destinationUrl. Example:
   {
     id: 2,
     category: "Beauty",
-    title: "Your product title",
-    destinationUrl: "PASTE_THE_PRODUCT_OR_AFFILIATE_URL_HERE",
-    buttonLabel: "View product"
+    title: "Korean Flower Hair Claw Clips – 4 Pieces (Multicolor)",
+    destinationUrl: "https://link.amazon/B07K5gZQJg",
+    platform: "Amazon",
+    buttonLabel: "Shop on Amazon"
+  },
+  {
+    id: 3,
+    category: "Beauty",
+    title: "Viral Gloss Stick Lipstick – Glossy Lips, Gorgeous Shades",
+    destinationUrl: "https://link.amazon/B06jNhBB8",
+    platform: "Amazon",
+    buttonLabel: "Shop on Amazon"
   }
-*/
+];
