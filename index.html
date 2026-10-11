@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff7f5" />
+  <meta name="description" content="QuickFinds — your daily dose of good finds in fashion, beauty and lifestyle." />
+  <title>QuickFinds | Good Finds, Lovely Prices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">✨ Little finds that make your day a little lovelier ✨</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="QuickFinds home">
+      <img src="assets/quickfinds-logo.png" alt="QuickFinds logo" class="brand-logo" onerror="this.style.display='none'">
+      <span class="brand-word">Quick<span>Finds</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#shop">Shop finds</a><a href="#about">About</a><a href="#disclosure">Affiliate notice</a>
+    </nav>
+    <a class="header-cta" href="https://www.instagram.com/quickfinds72/" target="_blank" rel="noopener noreferrer">Follow us ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="sparkle">✦</span> YOUR DAILY DOSE OF GOOD FINDS</p>
+        <h1>Lovely finds.<br><em>Happy prices.</em></h1>
+        <p class="hero-description">A little corner for fashion, beauty and lifestyle finds worth discovering. Browse our picks and find your next favourite. 💗</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#shop">Explore the finds <span>↓</span></a>
+          <a class="button button-light" href="https://www.instagram.com/quickfinds72/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        </div>
+        <div class="hero-note"><span class="note-heart">♡</span> Curated with love, just for you.</div>
+      </div>
+      <div class="hero-art" aria-label="QuickFinds welcome illustration">
+        <div class="blob blob-back"></div>
+        <div class="hero-card">
+          <div class="hero-card-top"><span>QUICKFINDS</span><span>♡</span></div>
+          <div class="hero-emoji">🛍️</div>
+          <div class="hero-card-title">Your next<br><em>favourite find</em></div>
+          <div class="hero-sticker sticker-one">good finds<br>only ✨</div>
+          <div class="hero-sticker sticker-two">♡</div>
+        </div>
+        <span class="floating flower">✿</span><span class="floating star">✧</span>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div>♡ Affordable picks</div><span>✦</span><div>♡ Everyday favourites</div><span>✦</span><div>♡ Fashion · Beauty · Lifestyle</div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE GOOD-FIND EDIT</p>
+          <h2>Find something <em>lovely.</em></h2>
+          <p class="section-subtitle">Tap a product to open it on the shopping website or app.</p>
+        </div>
+        <label class="search-box" for="product-search"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Search finds..." aria-label="Search products"></label>
+      </div>
+
+      <div class="category-tabs" role="group" aria-label="Filter by category">
+        <button class="category-tab active" data-category="All" type="button">All finds</button>
+        <button class="category-tab" data-category="Fashion" type="button">👗 Fashion</button>
+        <button class="category-tab" data-category="Beauty" type="button">🧴 Beauty</button>
+        <button class="category-tab" data-category="Lifestyle" type="button">🌷 Lifestyle</button>
+        <button class="category-tab" data-category="Gadgets" type="button">🎧 Gadgets</button>
+      </div>
+
+      <div class="product-list" id="product-list" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No finds match that search yet. Try another word. 💗</p>
+      <p class="edit-hint">To add products, open <code>products.js</code> and duplicate one product entry. Add its title and destination URL.</p>
+    </section>
+
+    <section class="follow-banner" id="about">
+      <div class="banner-icon">💌</div>
+      <div>
+        <p class="eyebrow">LET'S BE FINDS FRIENDS</p>
+        <h2>More good finds, <em>over on Instagram.</em></h2>
+        <p>Follow <strong>@quickfinds72</strong> for new picks, little recommendations and everyday inspiration.</p>
+      </div>
+      <a class="button button-primary" href="https://www.instagram.com/quickfinds72/" target="_blank" rel="noopener noreferrer">Follow @quickfinds72 ↗</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#">QuickFinds ♡</a>
+    <p>Your daily dose of good finds.</p>
+    <div class="footer-links"><a href="https://www.instagram.com/quickfinds72/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#disclosure">Affiliate disclosure</a><a href="#shop">Shop finds ↑</a></div>
+    <small>© <span id="year"></span> QuickFinds. Made with love.</small>
+  </footer>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
